@@ -80,7 +80,7 @@ end
 #   end 
 # end 
  
- def exit_jukebox(input)
+ def exit_jukebox
    puts "Goodbye"
  end 
 
