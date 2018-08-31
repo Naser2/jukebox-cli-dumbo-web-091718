@@ -54,17 +54,31 @@ end
 
 # If the user's response is a valid song number or song name, the method should `puts` out: `"Playing <song name>"`. Otherwise, it should `puts` out: `"Invalid input, please try again"`. 
 
- def play(songs) 
-   puts "Please enter a song name or number:"
-   input = gets.chomp 
-   songs.each.with_index do |song, index|
-     if input == songs.index.downcae 
+
+def play(songs)
+  puts "Please enter a song name or number"
+  input = gets.chomp
+  songs.each_with_index do |song, idx|
+    if input.to_i == (idx+1) || input == song
       puts "Playing #{song}"
-     else 
+      break
+    else
       puts "Invalid input, please try again"
-     end #if
-   end 
- end 
+      break
+    end 
+   end
+end
+# def play(songs) 
+#   puts "Please enter a song name or number:"
+#   input = gets.chomp 
+#   songs.each.with_index do |song, index|
+#     if input == songs.index.downcae 
+#       puts "Playing #{song}"
+#     else 
+#       puts "Invalid input, please try again"
+#     end #if
+#   end 
+# end 
  
  def exit_jukebox(input)
    puts "Goodbye"
