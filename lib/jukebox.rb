@@ -43,10 +43,10 @@ songs = [
 	  "Amos Lee - Keep It Loose, Keep It Tight"
 	]
 	
-def list(songs) 
-  songs.each.with_index(1) do |song,index|
-   puts "#{index}. #{song}"
- end 
+def list(songs)
+  songs.each_with_index do |song, i|
+    puts "#{i+1}. #{song}"
+  end
 end 
 
 # ### The `play` Method
